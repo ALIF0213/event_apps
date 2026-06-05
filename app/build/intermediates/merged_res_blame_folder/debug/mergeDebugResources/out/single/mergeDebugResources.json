@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_baseline_event_available_24.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\baseline_event_available_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_fragment_upcoming.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\fragment_upcoming.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_favorite.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_fragment_past.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\fragment_past.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_fragment_favorite.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\fragment_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_bookmark.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_bookmark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_search_background.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\search_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_fragment_setting.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\fragment_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_notifications.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_favorite_border.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_favorite_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_item_event.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\item_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_activity_detail.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_rounded_background.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\rounded_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_item_event_shimmer.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\item_event_shimmer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.appevent.app-debug-60:/layout_activity_detail.xml.flat",
+        "source": "com.example.appevent.app-main-62:/layout/activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-debug-60:\\drawable_baseline_event_24.xml.flat",
+        "source": "C:\\Users\\Acer\\.gradle\\daemon\\8.7\\com.example.appevent.app-main-62:\\drawable\\baseline_event_24.xml"
+    }
+]
