@@ -41,4 +41,4 @@ Demi alasan keamanan, API Key untuk layanan Gemini tidak disertakan di dalam rep
 
 1. Clone repositori ini:
    ```bash
-   git clone https://github.com/ALIF0213/aplikasi_event.git
+   https://github.com/ALIF0213/aplikasi_event.git
