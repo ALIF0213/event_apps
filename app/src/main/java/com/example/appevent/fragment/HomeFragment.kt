@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,14 +12,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appevent.R
 import com.example.appevent.ui.adapter.EventAdapter
 import com.example.appevent.ui.viewmodel.EventViewModel
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class HomeFragment : Fragment() {
 
     private val viewModel: EventViewModel by viewModels()
     private lateinit var eventAdapterActive: EventAdapter
     private lateinit var eventAdapterCompleted: EventAdapter
-    private lateinit var upcomingProgressBar: ProgressBar
-    private lateinit var pastProgressBar: ProgressBar
+    private lateinit var swipeRefresh: androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+    // 1. Ubah variabel menjadi ShimmerFrameLayout
+    private lateinit var shimmerActive: ShimmerFrameLayout
     private lateinit var errorTextView: TextView
 
     override fun onCreateView(
@@ -29,8 +31,18 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        upcomingProgressBar = view.findViewById(R.id.upcomingProgressBar)
-        pastProgressBar = view.findViewById(R.id.pastProgressBar)
+        swipeRefresh = view.findViewById(R.id.swipeRefresh)
+        swipeRefresh.setOnRefreshListener {
+            // Sembunyikan pesan error lama jika ada
+            errorTextView.visibility = View.GONE
+
+            // Panggil ulang fungsi fetch dari ViewModel
+            viewModel.fetchActiveEvents()
+            viewModel.fetchCompletedEvents()
+        }
+        // 2. Sesuaikan ID dengan yang ada di XML baru
+        shimmerActive = view.findViewById(R.id.shimmerActive)
+
         errorTextView = view.findViewById(R.id.errorTextView)
         val recyclerViewActive: RecyclerView = view.findViewById(R.id.recyclerViewActive)
         val recyclerViewCompleted: RecyclerView = view.findViewById(R.id.recyclerViewCompleted)
@@ -39,8 +51,10 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         recyclerViewCompleted.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
         eventAdapterActive = EventAdapter(emptyList())
         eventAdapterCompleted = EventAdapter(emptyList())
+
         recyclerViewActive.adapter = eventAdapterActive
         recyclerViewCompleted.adapter = eventAdapterCompleted
 
@@ -67,12 +81,17 @@ class HomeFragment : Fragment() {
             checkErrorState()
         }
 
+        // 3. Logika untuk menyalakan dan mematikan Shimmer Event Aktif
         viewModel.isLoadingUpcoming.observe(viewLifecycleOwner) { isLoading ->
-            upcomingProgressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-        }
+            if (isLoading) {
+                shimmerActive.startShimmer()
+                shimmerActive.visibility = View.VISIBLE
+            } else {
+                shimmerActive.stopShimmer()
+                shimmerActive.visibility = View.GONE
 
-        viewModel.isLoadingPast.observe(viewLifecycleOwner) { isLoading ->
-            pastProgressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+                swipeRefresh.isRefreshing = false
+            }
         }
 
         viewModel.error.observe(viewLifecycleOwner) { errorMessage ->

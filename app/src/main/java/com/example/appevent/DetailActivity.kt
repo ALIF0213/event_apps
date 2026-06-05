@@ -5,7 +5,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -18,6 +17,7 @@ import com.example.appevent.data.local.entity.FavoriteEvent
 import com.example.appevent.ui.viewmodel.FavoriteViewModel
 import com.example.appevent.ui.viewmodel.FavoriteViewModelFactory
 import com.example.appevent.ui.viewmodel.DetailViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DetailActivity : AppCompatActivity() {
     private val detailViewModel: DetailViewModel by viewModels()
@@ -31,7 +31,12 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var descriptionTextView: TextView
     private lateinit var linkButton: Button
     private lateinit var progressBar: ProgressBar
-    private lateinit var favoriteButton: ImageButton
+    private lateinit var favoriteButton: FloatingActionButton
+
+    // --- TAMBAHAN TOOLBAR 1: Deklarasi Variabel ---
+    private lateinit var toolbar: androidx.appcompat.widget.Toolbar
+    private lateinit var collapsingToolbar: com.google.android.material.appbar.CollapsingToolbarLayout
+    // ----------------------------------------------
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +52,22 @@ class DetailActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         favoriteButton = findViewById(R.id.btnFavorite)
 
+        // --- TAMBAHAN TOOLBAR 2: Inisialisasi & Logika Tombol Back ---
+        toolbar = findViewById(R.id.toolbar)
+        collapsingToolbar = findViewById(R.id.collapsingToolbar)
+
+        // Atur toolbar kustom menjadi ActionBar utama
+        setSupportActionBar(toolbar)
+
+        // Tampilkan panah kembali (Back Button)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Beri perintah pada panah kembali untuk menutup halaman
+        toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+        // -------------------------------------------------------------
+
         val eventId = intent.getIntExtra("EVENT_ID", -1)
         if (eventId != -1) {
             detailViewModel.fetchEventDetail(eventId)
@@ -61,6 +82,12 @@ class DetailActivity : AppCompatActivity() {
             if (event != null) {
                 Glide.with(this).load(event.imageLogo).into(eventImageView)
                 nameTextView.text = event.name
+
+                // --- TAMBAHAN TOOLBAR 3: Pasang Judul di CollapsingToolbar ---
+                // Agar saat di-scroll ke atas, nama event muncul di toolbar
+                collapsingToolbar.title = event.name
+                // -------------------------------------------------------------
+
                 ownerTextView.text = event.ownerName
                 timeTextView.text = "Waktu: ${event.beginTime} - ${event.endTime}"
                 quotaTextView.text = "Sisa Kuota: ${event.quota - event.registrants}"
@@ -104,7 +131,7 @@ class DetailActivity : AppCompatActivity() {
                     beginTime = event.beginTime,
                     endTime = event.endTime,
                     quota = event.quota,
-                    imageLogo = event.mediaCover,
+                    imageLogo = event.mediaCover, // Menggunakan mediaCover dari respons API
                     description = event.description,
                     link = event.link,
                     registrants = event.registrants

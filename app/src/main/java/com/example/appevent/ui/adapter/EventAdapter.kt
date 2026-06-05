@@ -1,7 +1,6 @@
 package com.example.appevent.ui.adapter
 
 import android.content.Intent
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,20 +39,7 @@ class EventAdapter(private var eventList: List<Any>) :
         private val quota: TextView = view.findViewById(R.id.tvEventQuota)
         private val image: ImageView = view.findViewById(R.id.ivEventImage)
 
-
-        private val backgroundColor: Int
-        private val textColor: Int
-
-        init {
-            val typedValue = TypedValue()
-            val theme = itemView.context.theme
-
-            theme.resolveAttribute(R.attr.eventItemBackground, typedValue, true)
-            backgroundColor = typedValue.data
-
-            theme.resolveAttribute(R.attr.eventItemTextColor, typedValue, true)
-            textColor = typedValue.data
-        }
+        // Variabel warna dan blok INIT sudah SAYA HAPUS karena tidak diperlukan lagi
 
         fun bind(event: Any) {
             when (event) {
@@ -68,12 +54,7 @@ class EventAdapter(private var eventList: List<Any>) :
                         .load(event.mediaCover)
                         .into(image)
 
-                    // Set background and text colors based on theme
-                    itemView.setBackgroundColor(backgroundColor)
-                    title.setTextColor(textColor)
-                    owner.setTextColor(textColor)
-                    city.setTextColor(textColor)
-                    quota.setTextColor(textColor)
+                    // Perintah setTextColor dan setBackgroundColor SAYA HAPUS
 
                     itemView.setOnClickListener {
                         val intent = Intent(itemView.context, DetailActivity::class.java)
@@ -92,11 +73,7 @@ class EventAdapter(private var eventList: List<Any>) :
                         .load(event.imageLogo)
                         .into(image)
 
-                    // Set background and text colors based on theme
-                    itemView.setBackgroundColor(backgroundColor)
-                    title.setTextColor(textColor)
-                    owner.setTextColor(textColor)
-                    quota.setTextColor(textColor)
+                    // Perintah setTextColor dan setBackgroundColor SAYA HAPUS
 
                     itemView.setOnClickListener {
                         val intent = Intent(itemView.context, DetailActivity::class.java)

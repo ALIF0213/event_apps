@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -14,18 +13,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appevent.R
 import com.example.appevent.ui.adapter.EventAdapter
 import com.example.appevent.ui.viewmodel.EventViewModel
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class PastFragment : Fragment() {
     private val viewModel: EventViewModel by viewModels()
     private lateinit var eventAdapter: EventAdapter
-    private lateinit var progressBar: ProgressBar
+    private lateinit var shimmer: ShimmerFrameLayout
     private lateinit var searchView: SearchView
+    private lateinit var swipeRefresh: androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_past, container, false)
-        progressBar = view.findViewById(R.id.progressBar)
+        shimmer = view.findViewById(R.id.shimmerLayoutPast)
+        swipeRefresh = view.findViewById(R.id.swipeRefresh)
+        swipeRefresh.setOnRefreshListener {
+            searchView.setQuery("", false)
+            searchView.clearFocus()
+            viewModel.fetchCompletedEvents()
+        }
         searchView = view.findViewById(R.id.searchView)
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -45,7 +52,14 @@ class PastFragment : Fragment() {
             eventAdapter.updateData(searchResults)
         }
         viewModel.isLoadingPast.observe(viewLifecycleOwner) { isLoading ->
-            progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            if (isLoading) {
+                shimmer.startShimmer()
+                shimmer.visibility = View.VISIBLE
+            } else {
+                shimmer.stopShimmer()
+                shimmer.visibility = View.GONE
+                swipeRefresh.isRefreshing = false
+            }
         }
         viewModel.error.observe(viewLifecycleOwner) { errorMessage ->
             errorMessage?.let {
