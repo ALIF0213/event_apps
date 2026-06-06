@@ -33,7 +33,7 @@ Aplikasi ini menggunakan teknologi pengembangan Android mutakhir:
 *(Tambahkan gambar cuplikan layar aplikasi Anda di sini nanti)*
 | Home Screen | AI Summarizer | Offline Favorites |
 | :---: | :---: | :---: |
-| <img src="link_gambar_1" width="200"/> | <img src="link_gambar_2" width="200"/> | <img src="link_gambar_3" width="200"/> |
+| <img src="Home Screen.jpeg" width="200"/> | <img src="Ai Summarize.jpeg" width="200"/> | <img src="Offline Favorites.jpeg" width="200"/> |
 
 ## 🔒 Cara Menjalankan Proyek (Setup & Installation)
 
