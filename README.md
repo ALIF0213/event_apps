@@ -49,4 +49,4 @@ For security reasons, the API Key for the Gemini service is not included in this
 
 1. Clone this repository (*Clone repositori ini*):
 ```bash
-   git clone [https://github.com/ALIF0213/aplikasi_event.git](https://github.com/ALIF0213/aplikasi_event.git)
+   git clone [https://github.com/ALIF0213/event_apps.git](https://github.com/ALIF0213/event_apps.git)
